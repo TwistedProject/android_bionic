@@ -39,6 +39,11 @@ typedef __CHAR16_TYPE__ char16_t;
 typedef __CHAR32_TYPE__ char32_t;
 #endif
 
+#if !defined(__cplusplus) || __cplusplus <= 199711L
+typedef __CHAR16_TYPE__ char16_t;
+typedef __CHAR32_TYPE__ char32_t;
+#endif
+
 #define __STD_UTF_16__ 1
 #define __STD_UTF_32__ 1
 
