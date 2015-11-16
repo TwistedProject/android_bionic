@@ -1,10 +1,7 @@
-/*	$OpenBSD: strncat.c,v 1.5 2005/08/08 08:05:37 espie Exp $ */
 /*-
- * Copyright (c) 1990 The Regents of the University of California.
+ * Copyright (c) 2015 Linaro Ltd.
+ * Written by Bernhard Rosenkränzer <Bernhard.Rosenkranzer@linaro.org>
  * All rights reserved.
- *
- * This code is derived from software contributed to Berkeley by
- * Chris Torek.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -40,18 +37,16 @@
 char *
 strncat(char *dst, const char *src, size_t n)
 {
-	if (n != 0) {
-		char *d = dst;
-		const char *s = src;
-
-		while (*d != 0)
-			d++;
-		do {
-			if ((*d = *s++) == 0)
-				break;
-			d++;
-		} while (--n != 0);
-		*d = 0;
-	}
-	return (dst);
+    if ( 0 != n ){
+        size_t const dstlen = strlen(dst);
+        size_t const srclen = strlen(src) ;
+        if (srclen >= n){
+            strncpy(dst + dstlen, src, n);
+            dst[dstlen + n] = 0;
+        }else{
+            strncpy(dst + dstlen, src, srclen);
+            dst[dstlen + srclen] = 0;
+        }
+    }
+    return dst;
 }
