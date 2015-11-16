@@ -13,6 +13,7 @@ libc_bionic_src_files_mips += \
     bionic/__memset_chk.cpp \
     bionic/__strcpy_chk.cpp \
     bionic/__strcat_chk.cpp \
+    bionic/strcat.c \
     bionic/strchr.cpp \
     bionic/strnlen.c \
     bionic/strrchr.cpp \
@@ -33,7 +34,6 @@ libc_openbsd_src_files_mips += \
     upstream-openbsd/lib/libc/string/memrchr.c \
     upstream-openbsd/lib/libc/string/stpcpy.c \
     upstream-openbsd/lib/libc/string/stpncpy.c \
-    upstream-openbsd/lib/libc/string/strcat.c \
     upstream-openbsd/lib/libc/string/strcpy.c \
     upstream-openbsd/lib/libc/string/strlcat.c \
     upstream-openbsd/lib/libc/string/strlcpy.c \
