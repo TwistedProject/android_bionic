@@ -8,6 +8,7 @@ libc_bionic_src_files_arm += \
     bionic/strchr.cpp \
     bionic/strnlen.c \
     bionic/strrchr.cpp \
+    bionic/strncat.c \
 
 libc_freebsd_src_files_arm += \
     upstream-freebsd/lib/libc/string/wcscat.c \
@@ -25,7 +26,6 @@ libc_openbsd_src_files_arm += \
     upstream-openbsd/lib/libc/string/stpncpy.c \
     upstream-openbsd/lib/libc/string/strlcat.c \
     upstream-openbsd/lib/libc/string/strlcpy.c \
-    upstream-openbsd/lib/libc/string/strncat.c \
     upstream-openbsd/lib/libc/string/strncmp.c \
     upstream-openbsd/lib/libc/string/strncpy.c \
 
