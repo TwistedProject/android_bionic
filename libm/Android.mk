@@ -3,10 +3,7 @@ LOCAL_PATH:= $(call my-dir)
 
 bionic_coverage := false
 
-ifneq (,$(filter $(TARGET_ARCH),x86 x86_64))
-# Clang has wrong long double sizes for x86.
 libm_clang := false
-endif
 
 # -----------------------------------------------------------------------------
 # libm.a
